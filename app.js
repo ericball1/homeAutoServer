@@ -25,6 +25,27 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use('/', index);
 app.use('/reboot-router', rebootRouter);
 
+app.post('/routerTelnet', function(req, res) {
+    console.log('Rebooting Router!');
+    // http://nodejs.org/api.html#_child_processes
+	var sys = require('sys')
+	var exec = require('child_process').exec;
+	var child;
+	// executes `pwd`
+	child = exec("sh /home/pi/routerReboot.sh", function (error, stdout, stderr) {
+	  sys.print('stdout: ' + stdout);
+	  sys.print('stderr: ' + stderr);
+	  if (error !== null) {
+	    console.log('exec error: ' + error);
+	  }
+	});
+	// or more concisely
+	var sys = require('sys')
+	var exec = require('child_process').exec;
+	function puts(error, stdout, stderr) { sys.puts(stdout) }
+	exec("ls -la", puts);
+});
+
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
   var err = new Error('Not Found');

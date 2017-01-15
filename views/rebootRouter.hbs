@@ -1,6 +1,6 @@
 <h1>Reboot Router</h1>
 <p>WARNING: THIS WILL DISRUPT ALL TRAFFIC ON THE NETWORK!</p>
-<button type="button" class="btn btn-danger" data-toggle="modal" data-target="#myModal">Reboot Router</button>
+<button id="reboot" type="button" class="btn btn-danger" data-toggle="modal" data-target="#myModal">Reboot Router</button>
 <div class="modal fade" tabindex="-1" role="dialog" id="myModal">
 	<div class="modal-dialog" role="document">
 		<div class="modal-content">
@@ -17,3 +17,11 @@
 			</div><!-- /.modal-content -->
 			</div><!-- /.modal-dialog -->
 			</div><!-- /.modal -->
+			<script>
+				$('#reboot').click(function() {
+			$.ajax({
+			type: 'POST',
+			url: 'http://localhost:3000/routerTelnet'
+			});
+			});
+			</script>
