@@ -1,12 +1,59 @@
 <!DOCTYPE html>
 <html>
-<head>
-	<title>Auto Home</title>
-	<link rel="stylesheet" href="/node_modules/material-design-lite/material.min.css">
-	<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-</head>
-<body>
-<h1>Hello World</h1>
-<script src="/node_modules/material-design-lite/material.min.js"></script>
+	<head>
+		<title>Auto Home</title>
+		<link rel="stylesheet" href="/node_modules/material-design-lite/material.min.css">
+		<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+	</head>
+	<body>
+		<!-- No header, and the drawer stays open on larger screens (fixed drawer). -->
+		<div class="mdl-layout mdl-js-layout mdl-layout--fixed-drawer">
+			<div class="mdl-layout__drawer">
+				<span class="mdl-layout-title">Auto Home</span>
+				<nav class="mdl-navigation">
+					<a class="mdl-navigation__link" href="#">Devices</a>
+					<a class="mdl-navigation__link" href="#">Internet Reboot</a>
+					<a class="mdl-navigation__link" href="#">Messages</a>
+				</nav>
+			</div>
+			<main class="mdl-layout__content">
+			<div class="page-content">
+				<div class="mdl-grid">
+					<div class="mdl-cell mdl-cell--8-col">
+						<div class="mdl-card mdl-shadow--4dp">
+							<div class="mdl-card__media"><img src="skytower.jpg" width="173" height="157" border="0"
+								alt="" style="padding:10px;">
+							</div>
+							<div class="mdl-card__supporting-text">
+								Auckland Sky Tower, taken March 24th, 2014
+							</div>
+							<div class="mdl-card__supporting-text">
+								The Sky Tower is an observation and telecommunications tower located in Auckland,
+								New Zealand. It is 328 metres (1,076 ft) tall, making it the tallest man-made structure
+								in the Southern Hemisphere.
+							</div>
+						</div>
+					</div>
+					<div class="mdl-cell mdl-cell--4-col">
+						<div class="mdl-card mdl-shadow--4dp">
+							<div class="mdl-card__media"><img src="skytower.jpg" width="173" height="157" border="0"
+								alt="" style="padding:10px;">
+							</div>
+							<div class="mdl-card__supporting-text">
+								Auckland Sky Tower, taken March 24th, 2014
+							</div>
+							<div class="mdl-card__supporting-text">
+								The Sky Tower is an observation and telecommunications tower located in Auckland,
+								New Zealand. It is 328 metres (1,076 ft) tall, making it the tallest man-made structure
+								in the Southern Hemisphere.
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		</main>
+	</div>
+	<script src="/node_modules/material-design-lite/material.min.js"></script>
 </body>
 </html>
