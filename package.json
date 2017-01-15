@@ -1,0 +1,11 @@
+{
+  "name": "homeautoserver",
+  "version": "1.0.0",
+  "description": "Home Automation Server",
+  "main": "index.js",
+  "scripts": {
+    "test": "node index.js"
+  },
+  "author": "Eric Ball",
+  "license": "ISC"
+}
